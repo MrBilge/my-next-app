@@ -16,8 +16,8 @@ export default async function Form() {
   return (
     <div  className="flex flex-col justify-center items-center m-5">
   
-      {posts.map(post=>(
-      <Link href={`posts/${post.id}`}>
+      {posts.map((post:any)=>(
+      <Link key={post.id} href={`posts/${post.id}`}>
         <p>{post.title}</p>
         </Link> 
       ))}

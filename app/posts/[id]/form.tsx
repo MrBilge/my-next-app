@@ -1,13 +1,15 @@
 "use client";
 import { useState } from "react";
 
-const Form  = async ({userId}) => {
+const Form  = async ({userId}:{
+  userId: boolean
+}) => {
     
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   
 
-  const handleAdd = async (event) => {
+  const handleAdd = async (event:any) => {
     event.preventDefault();
     const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
@@ -42,7 +44,6 @@ const Form  = async ({userId}) => {
         Add
        
       </button>
-      <p>{postId}</p>
     </form>
   );
 };

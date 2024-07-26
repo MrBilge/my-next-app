@@ -16,8 +16,8 @@ export default async function Todos() {
   return (
     <main className="flex justify-center items-center flex-col m-5 ">
       {data.map((item: { id: number; title: string; completed: boolean }) => (
-        <Link href={`/todo/${item.id}`}>
-          <div key={item.id}>
+        <Link key={item.id} href={`/todo/${item.id}`}>
+          <div >
             <h3>{item.title}</h3>
           </div>
         </Link>
