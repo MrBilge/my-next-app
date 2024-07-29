@@ -15,7 +15,9 @@ export default async function Page({ params }: { params: { id: string } }) {
   }
 
   async function getUsersData() {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${data.userId}`);
+    const res = await fetch(
+      `https://jsonplaceholder.typicode.com/users/${data.userId}`
+    );
 
     if (!res.ok) {
       throw new Error("Users not found");
@@ -36,15 +38,8 @@ export default async function Page({ params }: { params: { id: string } }) {
       <div className="flex justify-center items-center flex-col">
         {data.title}
         <div>
-          <Link href={`${data.id}/owner`}>
-            {userData.name}
-          
-          </Link>
-          <p>
-          {userData.email}
-          </p>
-      
-
+          <Link href={`${data.id}/owner`}>{userData.name}</Link>
+          <p>{userData.email}</p>
         </div>
       </div>
     </div>
