@@ -6,7 +6,7 @@ function Header() {
 
     { title: "Form", href: "./posts" },
 
-    { title: "Contact", href: "https://github.com/MrBilge" },
+    { title: "Posts", href: "./new-post" },
     { title: "Adress", href: "https://github.com/MrBilge" },
   
   ];
